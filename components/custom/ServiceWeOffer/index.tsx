@@ -1,48 +1,38 @@
-import React from "react";
-import "./styles.css";
+import React from 'react';
+import './styles.css';
+import Link from 'next/link';
+import { t } from '@appString/index';
+import { appStringMap } from '@appString/appStringMap';
+import { Framer } from '@sharedLayout/Framer';
 
 export const ServicesWeOffer = (): JSX.Element => {
+  const {
+    pages: {
+      Home: {
+        ourPrimeProjects: { primeProjects },
+      },
+    },
+  } = appStringMap;
+  
   return (
-    <section>
-      <h2 className="text-3xl text-center py-4">
-        Testimonials (share stories or quotes from participants)
-      </h2>
-      <main className="page-content">
-        <div className="card">
-          <div className="content">
-            <h2 className="title">Mountain View</h2>
-            <p className="copy">
-              Check out all of these gorgeous mountain trips with beautiful
-              views of, you guessed it, the mountains
-            </p>
-            <button className="btn">View Trips</button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="content">
-            <h2 className="title">To The Beach</h2>
-            <p className="copy">
-              Plan your next beach trip with these fabulous destinations
-            </p>
-            <button className="btn">View Trips</button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="content">
-            <h2 className="title">Desert Destinations</h2>
-            <p className="copy">It the desert you always dreamed of</p>
-            <button className="btn">Book Now</button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="content">
-            <h2 className="title">Explore The Galaxy</h2>
-            <p className="copy">
-              Seriously, straight up, just blast off into outer space today
-            </p>
-            <button className="btn">Book Now</button>
-          </div>
-        </div>
+    <section className='py-8 '>
+      <Framer animationType='down' className='text-3xl text-center py-4'>
+        {t('pages.Home.ourPrimeProjects.heading')}
+      </Framer>
+      <main className='page-content'>
+        {primeProjects.map(({ name, description },index) => {
+          return (
+            <Framer key={index} animationType='rotate' className='card shadow-md shadow-gray-700 dark:shadow-orange-100'>
+              <div className='content'>
+                <h2 className='title'>{name}</h2>
+                <p className='copy'>{description}</p>
+                <Link className='btn' href={'contact-us'}>
+                  {'Consult Us'}
+                </Link>
+              </div>
+            </Framer>
+          );
+        })}
       </main>
     </section>
   );

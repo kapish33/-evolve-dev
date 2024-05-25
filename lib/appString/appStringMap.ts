@@ -14,6 +14,8 @@ import {
   AboutIntro,
   AboutWhyBackToBachpan,
 } from './AppStringHelper/AboutUs';
+import { ShowCase } from './AppStringHelper/Home/ShowCase';
+import { outTech } from './AppStringHelper/Home/ourTechStack';
 
 export const appStringMap = {
   shared: {
@@ -26,6 +28,8 @@ export const appStringMap = {
       description: `At {company}, we specialize in transforming innovative ideas into viable Minimum Viable Products (MVPs) that capture market attention and drive growth. Our expert team of strategists, developers, and designers work closely with you to bring your vision to life, ensuring your startup is ready to make an impact.`,
       link1: HomeLink1,
       heroImage: homeImages,
+      ourPrimeProjects: ShowCase,
+      outTech,
       showcase: {
         showcaseData,
         showcaseArray,
