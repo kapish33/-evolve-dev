@@ -17,7 +17,7 @@ export const TechStacks = () => {
   } = appStringMap;
   const [selectedTech, setSelectedTech] = useState<keyof TechStack>(
     techStacks[0]
-  );
+  )
 
   const handleTechClick = (tech: keyof TechStack) => {
     setSelectedTech(tech);
