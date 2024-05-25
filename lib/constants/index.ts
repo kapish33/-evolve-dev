@@ -1,16 +1,16 @@
-import { buttonVariants } from '@/components/ui/button';
-import { type VariantProps } from 'class-variance-authority';
-import { Url } from 'next/dist/shared/lib/router/router';
+import { buttonVariants } from "@/components/ui/button";
+import { type VariantProps } from "class-variance-authority";
+import { Url } from "next/dist/shared/lib/router/router";
 
 type css = VariantProps<typeof buttonVariants>;
 
 export interface navigation {
-  variant: css['variant'];
+  variant: css["variant"];
   name: string;
   href: Url;
   size: {
-    pc: css['size'];
-    mobile: css['size'];
+    pc: css["size"];
+    mobile: css["size"];
   };
 }
 
@@ -30,10 +30,10 @@ export const NavLink = ({
 
 export const Navigation: Array<navigation> = [
   NavLink({
-    variant: 'link',
-    size: { mobile: 'sm', pc: 'default' },
-    name: '✈️  To Happiness',
-    href: 'flight-to-happiness',
+    variant: "link",
+    size: { mobile: "sm", pc: "default" },
+    name: "About",
+    href: "about",
   }),
   // NavLink({
   //   variant: "link",
@@ -42,16 +42,16 @@ export const Navigation: Array<navigation> = [
   //   href: "2nd-innings-wellness-programs",
   // }),
   NavLink({
-    variant: 'link',
-    size: { mobile: 'sm', pc: 'default' },
-    name: 'Fall Prevention',
-    href: 'fall-prevention-programs',
+    variant: "link",
+    size: { mobile: "sm", pc: "default" },
+    name: "Services",
+    href: "services",
   }),
   NavLink({
-    variant: 'link',
-    size: { mobile: 'sm', pc: 'default' },
-    name: 'Happy ❤️ Center',
-    href: 'happy-heart-center',
+    variant: "link",
+    size: { mobile: "sm", pc: "default" },
+    name: "Contact us",
+    href: "contact-us",
   }),
   // NavLink({
   //   variant: "secondary",
@@ -63,6 +63,6 @@ export const Navigation: Array<navigation> = [
 
 export const allProgramNames: string[] = [
   ...Navigation.map((nav) => nav.name),
-  'Mera Sathi Helpline',
-  '2nd Innings Wellness Programs',
+  "Mera Sathi Helpline",
+  "2nd Innings Wellness Programs",
 ];

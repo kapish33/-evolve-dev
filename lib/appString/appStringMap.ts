@@ -25,7 +25,7 @@ export const appStringMap = {
     Home: {
       homeIcon: assets.homeIcon,
       title: `Turning 💡 Ideas Into Reality`,
-      description: `At {company}, we specialize in transforming innovative ideas into viable Minimum Viable Products (MVPs) that capture market attention and drive growth. Our expert team of strategists, developers, and designers work closely with you to bring your vision to life, ensuring your startup is ready to make an impact.`,
+      description: `At {company}, we turn innovative ideas into functional Minimum Viable Products (MVPs) that attract market interest and foster growth. Our team of strategists, developers, and designers collaborate with you to bring your concept to life, ensuring your startup is ready to make a significant impact.`,
       link1: HomeLink1,
       heroImage: homeImages,
       ourPrimeProjects: ShowCase,

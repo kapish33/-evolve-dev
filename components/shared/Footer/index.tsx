@@ -1,4 +1,5 @@
 import { FooterData } from "@appString/AppStringHelper/Shared/Footer";
+import { env } from "@utils/envornment";
 import Link from "next/link";
 
 interface Props {}
@@ -54,7 +55,7 @@ export const Footer = ({}: Props): JSX.Element => {
         </div>
 
         <div className="py-8 text-center text-sm text-gray-400">
-          © 2024 - Back To Bachpan All rights reserved.
+          {`© 2024 - ${env.companyName} All rights reserved.`}
         </div>
       </footer>
     </div>
