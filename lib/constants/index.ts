@@ -33,7 +33,7 @@ export const Navigation: Array<navigation> = [
     variant: "link",
     size: { mobile: "sm", pc: "default" },
     name: "About",
-    href: "about",
+    href: "/about-us",
   }),
   // NavLink({
   //   variant: "link",

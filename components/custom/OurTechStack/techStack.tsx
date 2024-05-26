@@ -28,7 +28,7 @@ export const TechStacks = () => {
 
   return (
     <div className='mx-auto'>
-      <div className='flex space-x-4 flex-wrap'>
+      <div className='flex justify-center flex-wrap'>
         {techStacks.map((tech) => (
           <span
             key={tech}
@@ -50,7 +50,7 @@ export const TechStacks = () => {
                   {/* Make the icon bigger */}
                   <item.iconName className='text-4xl mx-auto text-pink-500 dark:text-pink-700 mb-2' />
                   {/* Style the text */}
-                  <div className='text-lg font-semibold text-gray-800'>
+                  <div className='text-lg font-semibold'>
                     {item.name}
                   </div>
                 </Framer>

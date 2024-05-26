@@ -4,11 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
 
-import {
-  userForm as formSchema,
-  selectableOptions,
-  userFormInterface,
-} from '@/schema';
+import { userForm as formSchema, userFormInterface } from '@/schema';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -21,15 +17,15 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from '@/components/ui/select';
 // import { CITY } from '@/lib/city';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+// import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
 import { sheerURL } from '@/server-functions/formSumit';
 
@@ -43,20 +39,12 @@ export default function ContactUsForm() {
   });
 
   async function onSubmit(values: userFormInterface) {
-    const { email, message, username, whatsappNumber, intrestedProgram } =
-      values;
+    const { email, message, username, whatsappNumber } = values;
     console.log(values);
     try {
-      const url = sheerURL(
-        username,
-        whatsappNumber,
-        email,
-        message,
-        intrestedProgram
-      );
+      const url = sheerURL(username, whatsappNumber, email, message);
 
       const request = await fetch(url);
-      
 
       // Show a success message to the user
       toast('We Had Sucessfully Recived Your Response', {
@@ -66,6 +54,9 @@ export default function ContactUsForm() {
         //   onClick: () => console.log('Undo'),
         // },
       });
+
+      // Reset the form fields
+      form.reset();
 
       // setTimeout(() => {
       //   window.open(
@@ -93,7 +84,7 @@ export default function ContactUsForm() {
             <FormItem className='space-y-3 py-3'>
               <FormLabel>{'Your Name'}</FormLabel>
               <FormControl>
-                <Input placeholder={'Enter Your Beautiful Name'} {...field} />
+                <Input placeholder={'Your Name'} {...field} />
               </FormControl>
 
               <FormMessage />
@@ -121,7 +112,7 @@ export default function ContactUsForm() {
           name={'whatsappNumber'}
           render={({ field }) => (
             <FormItem className='space-y-3 py-3'>
-              <FormLabel>{`Enter Your WhatsApp Number`}</FormLabel>
+              <FormLabel>{`Enter Your Contact Number`}</FormLabel>
               <FormControl>
                 <Input placeholder={'9999488644'} {...field} />
               </FormControl>
@@ -131,7 +122,7 @@ export default function ContactUsForm() {
           )}
         />
 
-        <FormField
+        {/* <FormField
           control={form.control}
           name={'intrestedProgram'}
           render={({ field }) => (
@@ -154,7 +145,7 @@ export default function ContactUsForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
 
         <FormField
           control={form.control}

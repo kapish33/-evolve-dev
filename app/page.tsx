@@ -2,6 +2,7 @@ import { Hero } from "@/components/custom/Hero";
 import { OurTechStack } from "@/components/custom/OurTechStack";
 // import { ProgramHero } from "@/components/custom/ProgarmHero";
 import { ServicesWeOffer } from "@/components/custom/ServiceWeOffer";
+import { GetinTouch } from "@sharedLayout/GetInTouch";
 // import { ShowCase } from "@/components/custom/ShowCase";
 // import { Statics } from "@/components/custom/Stratics";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <ServicesWeOffer />
       {/* <Statics /> */}
       <OurTechStack />
+      <GetinTouch />
     </main>
   );
 }

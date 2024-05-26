@@ -1,7 +1,7 @@
 import { allProgramNames } from '@constants/index';
 import { z } from 'zod';
 
-export const selectableOptions: any = [...allProgramNames]
+// export const selectableOptions: any = [...allProgramNames]
 
 export const userForm = z.object({
   username: z.string().min(2, {
@@ -16,7 +16,7 @@ export const userForm = z.object({
   message: z.string().min(3, {
     message: 'Please Enter Your Message',
   }),
-  intrestedProgram: z.enum(selectableOptions),
+  // intrestedProgram: z.enum(selectableOptions),
 });
 
 export type userFormInterface = z.infer<typeof userForm>;

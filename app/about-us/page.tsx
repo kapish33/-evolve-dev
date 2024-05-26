@@ -19,7 +19,7 @@ export default function AboutUs() {
           <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
             <div className='flex justify-between items-center flex-col lg:flex-row md:mt-20'>
               <div className='w-full lg:w-1/2'>
-                <h1 className='font-manrope text-5xl text-gray-900 font-bold leading-[4rem] mb-7 text-center lg:text-left'>
+                <h1 className='font-manrope text-5xl font-bold leading-[4rem] mb-7 text-center lg:text-left'>
                   {intro.h1}
                 </h1>
                 <p className='text-lg text-gray-500  text-center lg:text-left'>
