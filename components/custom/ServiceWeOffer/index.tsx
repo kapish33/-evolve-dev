@@ -22,7 +22,7 @@ export const ServicesWeOffer = (): JSX.Element => {
       <main className='page-content'>
         {primeProjects.map(({ name, description },index) => {
           return (
-            <Framer key={index} animationType='rotate' className='card shadow-md shadow-gray-700 dark:shadow-orange-100'>
+            <Framer key={index} animationType='up' className='card shadow-md shadow-gray-700 dark:shadow-orange-100'>
               <div className='content'>
                 <h2 className='title'>{name}</h2>
                 <p className='copy'>{description}</p>

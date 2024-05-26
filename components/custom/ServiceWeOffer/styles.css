@@ -67,16 +67,31 @@
     transition: transform calc(var(--d) * 2) var(--e);
   }
   .card:nth-child(1):before {
-    background-image: url(../../../assets/our-custumers/doctube.png);
+    background-image: url(../../../assets/our-custumers/doctube-m.png);
   }
   .card:nth-child(2):before {
-    background-image: url(../../../assets/our-custumers/sadhanatablet.png);
+    background-image: url(../../../assets/our-custumers/sadhanatablet-m.png);
   }
   .card:nth-child(3):before {
-    background-image: url(../../../assets/our-custumers/aol.png);
+    background-image: url(../../../assets/our-custumers/aol-m.png);
   }
   .card:nth-child(4):before {
-    background-image: url(../../../assets/our-custumers/taxSavingPro.png);
+    background-image: url(../../../assets/our-custumers/taxSavingPro-m.png);
+  }
+
+  @media (max-width: 790px) {
+    .card:nth-child(1):before {
+      background-image: url(../../../assets/our-custumers/doctube.png);
+    }
+    .card:nth-child(2):before {
+      background-image: url(../../../assets/our-custumers/sadhanatablet.png);
+    }
+    .card:nth-child(3):before {
+      background-image: url(../../../assets/our-custumers/aol.png);
+    }
+    .card:nth-child(4):before {
+      background-image: url(../../../assets/our-custumers/taxSavingPro.png);
+    }
   }
   
   .content {

@@ -28,29 +28,31 @@ export const TechStacks = () => {
 
   return (
     <div className='mx-auto'>
-      {techStacks.map((tech) => (
-        <span
-          key={tech}
-          className={`px-4 py-2 capitalize ${
-            selectedTech === tech ? 'underline underline-offset-4' : ''
-          }`}
-          onClick={() => handleTechClick(tech)}>
-          {tech}
-        </span>
-      ))}
+      <div className='flex space-x-4 flex-wrap'>
+        {techStacks.map((tech) => (
+          <span
+            key={tech}
+            className={`px-4 py-2 capitalize cursor-pointer ${
+              selectedTech === tech ? 'underline underline-offset-4' : ''
+            }`}
+            onClick={() => handleTechClick(tech)}>
+            {tech}
+          </span>
+        ))}
+      </div>
       {/* Selected from ourTechStack and show below */}
       {techItems && (
         <div className='mt-4'>
-          <ul className='py-4'>
+          <ul className='flex flex-wrap gap-4 justify-center py-4'>
             {techItems.map((item, index) => (
-              <li key={index} className='mb-4'>
-                <Framer animationType='up' className='flex items-center'>
+              <li key={index} className='flex flex-col items-center'>
+                <Framer animationType='up' className='p-2 text-center'>
                   {/* Make the icon bigger */}
-                  <item.iconName className='mr-4 text-4xl text-pink-500 dark:text-pink-700' />
+                  <item.iconName className='text-4xl mx-auto text-pink-500 dark:text-pink-700 mb-2' />
                   {/* Style the text */}
-                  <span className='text-lg font-semibold text-gray-800'>
+                  <div className='text-lg font-semibold text-gray-800'>
                     {item.name}
-                  </span>
+                  </div>
                 </Framer>
               </li>
             ))}
